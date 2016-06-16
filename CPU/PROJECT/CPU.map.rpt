@@ -1,0 +1,388 @@
+Analysis & Synthesis report for CPU
+Thu Jun 16 22:54:30 2016
+Quartus II 64-Bit Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "CPU:U0|ROM:U3"
+ 10. Port Connectivity Checks: "CPU:U0|RAM:U2"
+ 11. Port Connectivity Checks: "CPU:U0|ALU:U1"
+ 12. Port Connectivity Checks: "CPU:U0|Control_Center:U0"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jun 16 22:54:30 2016          ;
+; Quartus II 64-Bit Version          ; 11.0 Build 208 07/03/2011 SP 1 SJ Full Version ;
+; Revision Name                      ; CPU                                            ;
+; Top-level Entity Name              ; CPU_TOP                                        ;
+; Family                             ; Cyclone II                                     ;
+; Total logic elements               ; 0                                              ;
+;     Total combinational functions  ; 0                                              ;
+;     Dedicated logic registers      ; 0                                              ;
+; Total registers                    ; 0                                              ;
+; Total pins                         ; 65                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C8Q208C8        ;                    ;
+; Top-level entity name                                                      ; CPU_TOP            ; CPU                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                     ;
++----------------------------------+-----------------+------------------------+----------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                 ;
++----------------------------------+-----------------+------------------------+----------------------------------------------+
+; ../SOURCES/CPU.v                 ; yes             ; User Verilog HDL File  ; L:/SampleCpuOS/CPU/SOURCES/CPU.v             ;
+; ../SOURCES/Crontrol_Center.v     ; yes             ; User Verilog HDL File  ; L:/SampleCpuOS/CPU/SOURCES/Crontrol_Center.v ;
+; ../SOURCES/ALU.v                 ; yes             ; User Verilog HDL File  ; L:/SampleCpuOS/CPU/SOURCES/ALU.v             ;
+; ../SOURCES/RAM.v                 ; yes             ; User Verilog HDL File  ; L:/SampleCpuOS/CPU/SOURCES/RAM.v             ;
+; ../SOURCES/ROM.v                 ; yes             ; User Verilog HDL File  ; L:/SampleCpuOS/CPU/SOURCES/ROM.v             ;
++----------------------------------+-----------------+------------------------+----------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 65    ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |CPU_TOP                   ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 65   ; 0            ; |CPU_TOP            ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:U0|ROM:U3"                                                                                                                                                                     ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; addr ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND.            ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:U0|RAM:U2"                                                                                                                                                                    ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; addr ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data ; Bidir ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND.            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:U0|ALU:U1"                                                                                                                                                                       ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; indat  ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; outdat ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND.            ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:U0|Control_Center:U0"                                                                                                                                                            ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; indat  ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; outdat ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND.            ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Jun 16 22:54:29 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Found 2 design units, including 2 entities, in source file /samplecpuos/cpu/sources/cpu.v
+    Info: Found entity 1: CPU_TOP
+    Info: Found entity 2: CPU
+Info: Found 1 design units, including 1 entities, in source file /samplecpuos/cpu/sources/crontrol_center.v
+    Info: Found entity 1: Control_Center
+Info: Found 1 design units, including 1 entities, in source file /samplecpuos/cpu/sources/alu.v
+    Info: Found entity 1: ALU
+Info: Found 1 design units, including 1 entities, in source file /samplecpuos/cpu/sources/ram.v
+    Info: Found entity 1: RAM
+Info: Found 1 design units, including 1 entities, in source file /samplecpuos/cpu/sources/rom.v
+    Info: Found entity 1: ROM
+Info: Elaborating entity "CPU_TOP" for the top level hierarchy
+Info: Elaborating entity "CPU" for hierarchy "CPU:U0"
+Info: Elaborating entity "Control_Center" for hierarchy "CPU:U0|Control_Center:U0"
+Warning (10034): Output port "outdat" at Crontrol_Center.v(4) has no driver
+Info: Elaborating entity "ALU" for hierarchy "CPU:U0|ALU:U1"
+Warning (10034): Output port "outdat" at ALU.v(4) has no driver
+Info: Elaborating entity "RAM" for hierarchy "CPU:U0|RAM:U2"
+Warning: Entity "RAM" contains only dangling pins
+Info: Elaborating entity "ROM" for hierarchy "CPU:U0|ROM:U3"
+Warning (10034): Output port "data" at ROM.v(4) has no driver
+Warning: Entity "ROM" contains only dangling pins
+Warning: 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: The following bidir pins have no drivers
+    Warning: Bidir "addr[0]" has no driver
+    Warning: Bidir "addr[1]" has no driver
+    Warning: Bidir "addr[2]" has no driver
+    Warning: Bidir "addr[3]" has no driver
+    Warning: Bidir "addr[4]" has no driver
+    Warning: Bidir "addr[5]" has no driver
+    Warning: Bidir "addr[6]" has no driver
+    Warning: Bidir "addr[7]" has no driver
+    Warning: Bidir "addr[8]" has no driver
+    Warning: Bidir "addr[9]" has no driver
+    Warning: Bidir "addr[10]" has no driver
+    Warning: Bidir "addr[11]" has no driver
+    Warning: Bidir "addr[12]" has no driver
+    Warning: Bidir "addr[13]" has no driver
+    Warning: Bidir "addr[14]" has no driver
+    Warning: Bidir "addr[15]" has no driver
+    Warning: Bidir "addr[16]" has no driver
+    Warning: Bidir "addr[17]" has no driver
+    Warning: Bidir "addr[18]" has no driver
+    Warning: Bidir "addr[19]" has no driver
+    Warning: Bidir "addr[20]" has no driver
+    Warning: Bidir "addr[21]" has no driver
+    Warning: Bidir "addr[22]" has no driver
+    Warning: Bidir "addr[23]" has no driver
+    Warning: Bidir "addr[24]" has no driver
+    Warning: Bidir "addr[25]" has no driver
+    Warning: Bidir "addr[26]" has no driver
+    Warning: Bidir "addr[27]" has no driver
+    Warning: Bidir "addr[28]" has no driver
+    Warning: Bidir "addr[29]" has no driver
+    Warning: Bidir "addr[30]" has no driver
+    Warning: Bidir "addr[31]" has no driver
+    Warning: Bidir "data[1]" has no driver
+    Warning: Bidir "data[2]" has no driver
+    Warning: Bidir "data[3]" has no driver
+    Warning: Bidir "data[4]" has no driver
+    Warning: Bidir "data[5]" has no driver
+    Warning: Bidir "data[6]" has no driver
+    Warning: Bidir "data[7]" has no driver
+    Warning: Bidir "data[8]" has no driver
+    Warning: Bidir "data[9]" has no driver
+    Warning: Bidir "data[10]" has no driver
+    Warning: Bidir "data[11]" has no driver
+    Warning: Bidir "data[12]" has no driver
+    Warning: Bidir "data[13]" has no driver
+    Warning: Bidir "data[14]" has no driver
+    Warning: Bidir "data[15]" has no driver
+    Warning: Bidir "data[16]" has no driver
+    Warning: Bidir "data[17]" has no driver
+    Warning: Bidir "data[18]" has no driver
+    Warning: Bidir "data[19]" has no driver
+    Warning: Bidir "data[20]" has no driver
+    Warning: Bidir "data[21]" has no driver
+    Warning: Bidir "data[22]" has no driver
+    Warning: Bidir "data[23]" has no driver
+    Warning: Bidir "data[24]" has no driver
+    Warning: Bidir "data[25]" has no driver
+    Warning: Bidir "data[26]" has no driver
+    Warning: Bidir "data[27]" has no driver
+    Warning: Bidir "data[28]" has no driver
+    Warning: Bidir "data[29]" has no driver
+    Warning: Bidir "data[30]" has no driver
+    Warning: Bidir "data[31]" has no driver
+Warning: The following tri-state nodes are fed by constants
+    Warning: The pin "data[0]" is fed by GND
+    Warning: The pin "data[0]" is fed by GND
+    Warning: The pin "data[0]" is fed by GND
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+Info: Implemented 65 device resources after synthesis - the final resource count might be different
+    Info: Implemented 1 input pins
+    Info: Implemented 0 output pins
+    Info: Implemented 64 bidirectional pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 76 warnings
+    Info: Peak virtual memory: 373 megabytes
+    Info: Processing ended: Thu Jun 16 22:54:30 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,7 @@
+module CPU_TOP( clk, addr, data );
+	input clk;
+	inout [31:0]addr;
+	inout [31:0]data;
+	
+endmodule
+
